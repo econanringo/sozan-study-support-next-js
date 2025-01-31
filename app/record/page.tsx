@@ -18,6 +18,12 @@ export default function Record() {
                 <Button className="w-full">数学</Button>
                 </Link>
                 <div style={{ height: "12px" }}></div>
+                <Link href="/record/japanese" className="w-full">
+                <Button className="w-full">
+                    英語
+                </Button>
+                </Link>
+                <div style={{ height: "12px" }}></div>
                 <Link href="/record/science" className="w-full">
                 <Button className="w-full">理科</Button>
                 </Link>
