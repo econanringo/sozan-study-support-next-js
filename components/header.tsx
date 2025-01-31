@@ -23,7 +23,7 @@ const apps = [
 
 export function Header() {
     return (
-        <header className="bg-background border-b fixed top-0 left-0 right-0 z-10">
+        <><header className="bg-background border-b fixed top-0 left-0 right-0 z-10">
             <div className="flex h-16 items-center justify-between px-4 f">
                 <div className="flex items-center space-x-4">
                     <Link href="/" className="font-bold text-xl">
@@ -80,6 +80,6 @@ export function Header() {
                     </DropdownMenu>
                 </nav>
             </div>
-        </header>
+        </header><div style={{ height: "64px" }}></div></>
     )
 }
