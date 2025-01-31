@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link"
-import { User, Settings, LogOut, Grid, Calendar, MessageSquare, CheckSquare, BarChart2, FolderOpen } from "lucide-react"
+import { User, Settings, LogOut, Grid, MessageSquare, ChartLine, Clock, ScrollText } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
     DropdownMenu,
@@ -13,11 +13,10 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { signOut, getAuth } from "firebase/auth"
 
 const apps = [
-    { name: "Calendar", icon: Calendar, url: "/calendar" },
-    { name: "Messages", icon: MessageSquare, url: "/messages" },
-    { name: "Tasks", icon: CheckSquare, url: "/tasks" },
-    { name: "Analytics", icon: BarChart2, url: "/analytics" },
-    { name: "Files", icon: FolderOpen, url: "/files" },
+    { name: "Overview", icon: ChartLine, url: "/" },
+    { name: "Chat", icon: MessageSquare, url: "/chat" },
+    { name: "Study", icon: Clock, url: "/record" },
+    { name: "Logs", icon: ScrollText, url: "/logs" },
 ]
 
 export function Header() {
