@@ -6,11 +6,13 @@ import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
+    DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { signOut, getAuth } from "firebase/auth"
+import { Email } from "@/components/accountInfo/email";
 
 const apps = [
     { name: "Overview", icon: ChartLine, url: "/" },
@@ -57,6 +59,10 @@ export function Header() {
                             </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end">
+                            <DropdownMenuLabel className="font-bold">
+                                <Email />
+                            </DropdownMenuLabel>
+                            <DropdownMenuSeparator />
                             <DropdownMenuItem>
                                 <User className="mr-2 h-4 w-4" />
                                 <span>Profile</span>
@@ -77,4 +83,3 @@ export function Header() {
         </header>
     )
 }
-

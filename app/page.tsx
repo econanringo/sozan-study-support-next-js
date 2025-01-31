@@ -1,4 +1,5 @@
 "use client";
+import Email from "@/components/accountInfo/username";
 import { Header } from "@/components/header";
 import { auth } from "@/lib/firebaseConfig";
 import { onAuthStateChanged } from "firebase/auth";
@@ -23,7 +24,7 @@ export default function Home() {
     <>
       <Header />
       <div style={{ height: "64px" }}></div>
-      <p>こんにちは</p>
+      <Email />
     </>
   );
 }
