@@ -16,12 +16,6 @@ export function LoginForm({ className }: { className?: string }) {
   const [error, setError] = useState("");
   const router = useRouter();
 
-  useEffect(() => {
-    if (process.env.NODE_ENV === "development") {
-      connectAuthEmulator(auth, "http://localhost:9099");
-    }
-  }, []);
-
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");

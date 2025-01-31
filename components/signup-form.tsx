@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { connectAuthEmulator, createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/lib/firebaseConfig"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
@@ -15,12 +15,6 @@ export function SignUpForm({ className }: { className?: string }) {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const router = useRouter();
-
-  useEffect(() => {
-    if (process.env.NODE_ENV === "development") {
-      connectAuthEmulator(auth, "http://localhost:9099");
-    }
-  }, []);
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
